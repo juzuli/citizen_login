@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:indeed/src/pages/MyHomePage.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:indeed/src/pages/splash_screen.dart';
+
+import 'bloc/contacts/contact_cubit.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -8,13 +11,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return BlocProvider(
+      create: (context) => ContactCubit(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: const SplashScreen(),
       ),
-      home:  const MyHomePage(),
     );
   }
 }
