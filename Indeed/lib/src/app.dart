@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       create: (context) => ContactCubit(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
+        title: 'Indeed Demo',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),

@@ -38,7 +38,7 @@ class _SplashScreenState extends State<SplashScreen> {
         child: AnimatedOpacity(
             opacity: _isVisible ? 1.0 : 0,
             duration: const Duration(milliseconds: 1200),
-            child: Image.asset('assets/images/Indeed_logo.png',scale: 20,)),
+            child: Image.asset('assets/images/SampleLogo.png',)),
       ),
     );
   }
