@@ -18,8 +18,7 @@ class ContactCubit extends Cubit<ContactState> {
     emit(ContactLoading());
     try{
       final contactRaw = await http
-          .get(Uri.parse('https://jsonkeeper.com/b/LGYN'));
-
+          .get(Uri.parse('https://jsonkeeper.com/b/QHNI'));
       // String contactRaw = await repository.loadAsset();
       List<dynamic> contactList = jsonDecode(contactRaw.body);
       List<ContactModel> contactModelList = contactList.map<ContactModel>((e) => ContactModel.fromJSON(e)).toList();
